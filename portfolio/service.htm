@@ -53,7 +53,7 @@
 				<nav id="navigation">
 					<ul id="menu">
 						<li class="menu-item menu-item-has-children">
-							<a href="../about.htm">Об авторе</a>
+							<a href="/portfolio/about.htm">Об авторе</a>
 						</li>
 						<li class="menu-item menu-item-has-children">
 							<a href="index.htm">Проекты</a>
@@ -68,6 +68,8 @@
 							<a href="service.htm">Услуги</a>
 							 <ul class="sub-menu cat-level-0">
 								<li class="menu-item menu-not-children"><a href="service/interior-design.html">Дизайн-проект</a></li>
+								<li class="menu-item menu-not-children"><a href="service/3d-visualization.html">3D визуализация</a></li>
+								<li class="menu-item menu-not-children"><a href="service/author-supervision.html">Авторский надзор</a></li>
 							 </ul>
 						</li>
 						<li class="menu-item menu-not-children">
@@ -116,61 +118,36 @@
 <section>
 	<div class="service-wrapper container">
 		<div class="row">
-			<div class="service-photo col-xs-12 col-sm-6 col-md-4 col-lg-4 bg-image position-relative">
-				<img class="mw-100" src="/portfolio/service/placeholder.png" alt="3D визуализация">
+			<a href="service/3d-visualization.html" class="service-photo service-photo--link col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<img class="mw-100" src="img/visual.jpg" alt="3D визуализация">
 				<div class="service-desc">
 					<div class="service-title">3D ВИЗУАЛИЗАЦИЯ</div>
 					<div class="service-price">1 000 р/м2</div>
 					<div class="service-btn">
-						<button type="button" onclick="overlayServiceOne.showModal()">Подробнее</button>
+						<span>Подробнее</span>
 					</div>
-					<dialog id="overlayServiceOne">
-						<form method="dialog"><button type="submit">X</button></form>
-						<ul>
-							<li>Обмеры</li>
-							<li>Планировочное решение (2-3 варианта)</li>
-							<li>3D-визуализация, 2 круга правок</li>
-						</ul>
-						<div class="service__btn">
-							<button class="get-info__btn"><span><a href="https://wa.me/79033475152?text=Добрый день! Интересует услуга 3D ВИЗУАЛИЗАЦИЯ">Оставить заявку</a></span></button>
-						</div>
-					</dialog>
 				</div>
-			</div>
+			</a>
 			<a href="service/interior-design.html" class="service-photo service-photo--link col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<img class="mw-100" src="/portfolio/service/placeholder.png" alt="Дизайн-проект">
+				<img class="mw-100" src="img/design.jpg" alt="Дизайн-проект">
 				<div class="service-desc">
 					<div class="service-title">ДИЗАЙН-ПРОЕКТ</div>
 					<div class="service-price">3 000 р/м2</div>
 					<div class="service-btn">
-						<span class="service-btn__text">Подробнее</span>
+						<span>Подробнее</span>
 					</div>
 				</div>
 			</a>
-			<div class="service-photo col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<img src="/portfolio/service/placeholder.png" alt="Авторский надзор">
+			<a href="service/author-supervision.html" class="service-photo service-photo--link col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<img src="img/work.jpg" alt="Авторский надзор">
 				<div class="service-desc">
 					<div class="service-title">АВТОРСКИЙ НАДЗОР</div>
 					<div class="service-price">от 30 000 р</div>
 					<div class="service-btn">
-						<button type="button" onclick="overlayServiceThree.showModal()">Подробнее</button>
+						<span>Подробнее</span>
 					</div>
-					<dialog id="overlayServiceThree">
-						<form method="dialog"><button type="submit">X</button></form>
-						<p class="service__intro">Даже при наличии подробных чертежей у строителей возникают дополнительные вопросы - помогаем их решить в ходе авторского надзора.</p>
-						<ul>
-							<li>Выезды на стройку для контроля работ</li>
-							<li>Замеры и внесение изменений в проект</li>
-							<li>Выезды в салоны для подбора материалов</li>
-							<li>Взаимодействие с подрядчиками</li>
-							<li>Закупка декора</li>
-						</ul>
-						<div class="service__btn">
-							<button class="get-info__btn"><span><a href="https://wa.me/79033475152?text=Добрый день! Интересует услуга: АВТОРСКИЙ НАДЗОР">Оставить заявку</a></span></button>
-						</div>
-					</dialog>
 				</div>
-			</div>
+			</a>
 		</div>
 	</div>
 </section>
