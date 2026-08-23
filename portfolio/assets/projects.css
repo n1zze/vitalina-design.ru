@@ -5,43 +5,125 @@
   color: #111;
 }
 
+body:has(.projects-page) #header,
+body:has(.projects-page) #navigation,
+body:has(.projects-page) #navigation a {
+  font-family: "Manrope", sans-serif;
+  font-size: 19.2px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+body:has(.projects-page) #navigation ul#menu > li > a,
+body:has(.projects-page) #navigation ul#menu .sub-menu a {
+  font-weight: 300 !important;
+}
+
+/* Footer typography override for projects pages */
+body:has(.projects-page) #footer {
+  font-family: "Manrope", sans-serif;
+}
+
+body:has(.projects-page) #footer,
+body:has(.projects-page) .newfooter {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+body:has(.projects-page) .newfooter a,
+body:has(.projects-page) .footer-privacy,
+body:has(.projects-page) .copy,
+body:has(.projects-page) .dev-link a {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.5;
+}
+
 .projects-page__intro {
-  max-width: 1200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: none;
   margin: 0 auto;
-  padding: 92px 25px 56px;
-  text-align: center;
+  min-height: min(720px, calc(100vh - 72px));
+  padding: 96px max(25px, calc((100vw - 1400px) / 2 + 25px)) 48px;
+  text-align: left;
+  color: #fff;
+  background-color: #1a1714;
+  background-image: linear-gradient(180deg, rgba(10, 11, 14, .16) 15%, rgba(10, 11, 14, .82) 100%), var(--project-intro-image);
+  background-position: center;
+  background-size: cover;
 }
 
 .projects-page__eyebrow,
 .project-meta {
-  color: #777;
+  color: rgba(255, 255, 255, .78);
   font-size: 12px;
   letter-spacing: .14em;
   text-transform: uppercase;
 }
 
+.projects-page__eyebrow {
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: .18em;
+  line-height: 1.3;
+}
+
 .projects-page__title {
-  margin: 14px 0 18px;
+  max-width: 760px;
+  margin: 0 0 56px;
   font-family: "Manrope", sans-serif;
-  font-size: clamp(32px, 5vw, 64px);
-  font-weight: 500;
-  line-height: 1.08;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: #fff;
 }
 
 .projects-page__description {
   max-width: 620px;
-  margin: 0 auto;
+  margin: 0 0 32px;
   color: #666;
   font-size: 16px;
   line-height: 1.7;
 }
 
 .project-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 280px));
+  justify-content: start;
+  gap: 28px 72px;
+  margin-top: 0;
+  text-align: left;
+  align-self: stretch;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, .26);
+}
+
+.project-meta span {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px 28px;
-  margin-top: 30px;
+  flex-direction: column;
+  gap: 6px;
+  color: rgba(255, 255, 255, .92);
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.project-meta b {
+  color: rgba(255, 255, 255, .72);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .project-gallery {
@@ -148,13 +230,104 @@
   outline-offset: 6px;
 }
 
+/* Catalog surface: compact editorial intro and deliberate grid hierarchy. */
+.projects-catalog-page .projects-page__intro {
+  min-height: 0;
+  max-width: 1400px;
+  padding: 88px 25px 64px;
+  background: #fff;
+  color: #1a1714;
+}
+
+.projects-catalog-page .projects-page__eyebrow {
+  color: #a88e78;
+  margin-bottom: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  line-height: 1.3;
+}
+
+.projects-catalog-page .projects-page__title {
+  max-width: 620px;
+  margin-bottom: 18px;
+  color: #1a1714;
+  font-size: 36px;
+  font-weight: 200;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+}
+
+.projects-catalog-page .projects-page__description {
+  max-width: 620px;
+  margin: 0;
+  color: #6b6560;
+}
+
+.projects-catalog-page .projects-catalog {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 25px 100px;
+}
+
+.projects-catalog-page .projects-catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 56px 16px;
+}
+
+.projects-catalog-page .project-card__image {
+  aspect-ratio: 7 / 5;
+}
+
+.projects-catalog-page .project-card__title,
+.projects-catalog-page .project-card__meta {
+  font-family: "Manrope", sans-serif;
+}
+
 @media (max-width: 767px) {
   .projects-page {
     padding-top: 72px;
   }
 
   .projects-page__intro {
-    padding: 62px 18px 42px;
+    min-height: 620px;
+    padding: 64px 18px 28px;
+    text-align: left;
+  }
+
+  .projects-catalog-page .projects-page__intro {
+    padding: 64px 18px 48px;
+  }
+
+  .projects-catalog-page .projects-page__title {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+
+  .projects-catalog-page .projects-catalog {
+    padding: 0 18px 64px;
+  }
+
+  .projects-catalog-page .projects-catalog__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .projects-page__title {
+    margin-bottom: 36px;
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .project-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+    padding-top: 18px;
+  }
+
+  .project-meta span {
+    font-size: 18px;
   }
 
   .project-gallery,
@@ -200,31 +373,54 @@
 /* ── Планировочное решение (До / После) ────────────────────── */
 
 .project-floorplan {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 25px 60px;
-  text-align: center;
+  max-width: none;
+  margin: 0;
+  padding: 80px 0;
+  text-align: left;
 }
 
 .project-floorplan__title {
+  max-width: 1400px;
+  margin: 0 auto 12px;
+  padding: 0 25px;
   font-family: "Manrope", sans-serif;
-  font-size: clamp(24px, 3vw, 40px);
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 12px;
+  font-size: 36px;
+  font-weight: 200;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  color: #1a1714;
+}
+
+.project-floorplan__marker {
+  max-width: 1400px;
+  margin: 0 auto 16px;
+  padding: 0 25px;
 }
 
 .project-floorplan__subtitle {
+  max-width: 1400px;
+  margin: 0 auto 32px;
+  padding: 0 25px;
   color: #777;
   font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 32px;
 }
 
 .project-floorplan__slider {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  margin: 40px auto 0;
+}
+
+.project-floorplan__slider .juxtapose {
+  position: relative;
+}
+
+.project-floorplan__slider .jx-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Кастомизация Juxtapose.js под дизайн сайта */
@@ -241,7 +437,24 @@
 
 @media (max-width: 767px) {
   .project-floorplan {
-    padding: 0 18px 40px;
+    padding: 64px 0;
+  }
+
+  .project-floorplan__title,
+  .project-floorplan__subtitle,
+  .project-floorplan__marker {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .project-floorplan__title {
+    font-size: 28px;
+  }
+
+  .project-floorplan__slider {
+    width: 100%;
+    max-width: 100%;
+    margin: 28px 0 0;
   }
 
   .project-floorplan__subtitle {
@@ -264,4 +477,60 @@
   .project-card__image img {
     transition: none;
   }
+}
+
+
+/* ── Типографика header и footer для страниц проектов ────────────────────── */
+
+/* Header and Navigation */
+.projects-page #header,
+.projects-page ~ #header,
+main.projects-page ~ #header {
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 19.2px !important;
+}
+
+#header #navigation,
+#header #navigation a,
+#header #navigation ul#menu > li > a,
+#header #navigation ul#menu .sub-menu a {
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 19.2px !important;
+}
+
+/* Footer typography */
+#footer,
+#footer .newfooter,
+#footer .newfooter * {
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 300 !important;
+}
+
+#footer {
+  font-size: 16px !important;
+}
+
+#footer .newfooter {
+  font-size: 16px !important;
+  font-weight: 300 !important;
+}
+
+#footer .footer-privacy {
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+}
+
+#footer .copy {
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+}
+
+#footer .dev-link a {
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
 }

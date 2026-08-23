@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Политика обработки персональных данных - VITALINA DESIGN</title>
+  <meta name="description" content="Политика обработки персональных данных VITALINA DESIGN.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../img/icons/favicon.ico">
+  <link href="../skins/saparova/css/main.css?v=14" rel="stylesheet">
+  <link href="../skins/saparova/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <style>
+    /* Privacy Page Styles */
+    html, body {
+      height: 100%;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .privacy-section {
+      flex: 1 0 auto;
+      padding-top: 160px;
+      padding-bottom: 100px;
+      background: #fafafa;
+    }
+
+    .privacy-wrapper {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    @media (max-width: 991px) {
+      .privacy-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* Sidebar Navigation */
+    .privacy-nav {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+
+    .privacy-nav__title {
+      font-family: 'Manrope', 'Proxima', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin: 0 0 20px 0;
+    }
+
+    .privacy-nav__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-left: 1px solid #e0e0e0;
+    }
+
+    .privacy-nav__item {
+      margin: 0;
+    }
+
+    .privacy-nav__link {
+      display: block;
+      padding: 10px 0 10px 20px;
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-left: 2px solid transparent;
+      margin-left: -1px;
+    }
+
+    .privacy-nav__link:hover {
+      color: #000;
+      border-left-color: #000;
+    }
+
+    .privacy-nav__link.is-active {
+      color: #000;
+      border-left-color: #000;
+      font-weight: 600;
+    }
+
+    /* Main Content */
+    .privacy-content {
+      max-width: 720px;
+    }
+
+    .privacy-header {
+      margin-bottom: 50px;
+    }
+
+    .privacy-marker {
+      font-family: 'Manrope', 'Proxima', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .privacy-title {
+      font-family: 'Manrope', 'Proxima', Arial, sans-serif;
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #1a1a1a;
+      margin: 0 0 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .privacy-title {
+        font-size: 32px;
+      }
+    }
+
+    .privacy-intro {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #555;
+      margin: 0;
+    }
+
+    /* Privacy Article Sections */
+    .privacy-article {
+      margin-bottom: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .privacy-article:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .privacy-article__number {
+      font-family: 'Manrope', 'Proxima', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #999;
+      display: inline-block;
+      background: #f0f0f0;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .privacy-article__title {
+      font-family: 'Manrope', 'Proxima', Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #1a1a1a;
+      margin: 0 0 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .privacy-article__title {
+        font-size: 20px;
+      }
+    }
+
+    .privacy-article__text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #444;
+      margin: 0 0 16px 0;
+    }
+
+    .privacy-article__text:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-article__list {
+      margin: 16px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .privacy-article__list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .privacy-article__list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #999;
+    }
+
+    .privacy-article__link {
+      color: #000;
+      text-decoration: underline;
+      text-decoration-color: #ccc;
+      text-underline-offset: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .privacy-article__link:hover {
+      text-decoration-color: #000;
+    }
+
+    /* Back link */
+    .privacy-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+      margin-top: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .privacy-back:hover {
+      color: #000;
+    }
+
+    .privacy-back::before {
+      content: "←";
+      font-size: 16px;
+    }
+
+    /* Mobile Nav Toggle */
+    @media (max-width: 991px) {
+      .privacy-nav {
+        position: static;
+        background: #fff;
+        padding: 24px;
+        border-radius: 8px;
+        border: 1px solid #e8e8e8;
+      }
+    }
+
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body id="home">
+<header id="header">
+  <div class="container container-header container-25">
+    <div class="header-container">
+      <div class="logo-col">
+        <a href="/" class="fn-load"><img class="logo" src="../skins/saparova/img/vi-black.svg" alt="VITALINA DESIGN"></a>
+      </div>
+      <div class="menu-col">
+        <nav id="navigation">
+          <ul id="menu">
+            <li class="menu-item"><a href="about.htm">Об авторе</a></li>
+            <li class="menu-item"><a href="index.htm">Проекты</a></li>
+            <li class="menu-item"><a href="service.htm">Услуги</a></li>
+            <li class="menu-item"><a href="contact.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="trigger-col"><a href="#0" class="nav-trigger"><span></span></a></div>
+    </div>
+  </div>
+</header>
+
+<main class="privacy-section">
+  <div class="privacy-wrapper">
+    <!-- Sidebar Navigation -->
+    <aside class="privacy-nav">
+      <h2 class="privacy-nav__title">Содержание</h2>
+      <ul class="privacy-nav__list">
+        <li class="privacy-nav__item">
+          <a href="#section-1" class="privacy-nav__link">Общие положения</a>
+        </li>
+        <li class="privacy-nav__item">
+          <a href="#section-2" class="privacy-nav__link">Какие данные обрабатываются</a>
+        </li>
+        <li class="privacy-nav__item">
+          <a href="#section-3" class="privacy-nav__link">Цель обработки</a>
+        </li>
+        <li class="privacy-nav__item">
+          <a href="#section-4" class="privacy-nav__link">Передача данных</a>
+        </li>
+        <li class="privacy-nav__item">
+          <a href="#section-5" class="privacy-nav__link">Контакты</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="privacy-content">
+      <header class="privacy-header">
+        <span class="privacy-marker">[ Документ ]</span>
+        <h1 class="privacy-title">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ И СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ</h1>
+        <p class="privacy-intro">Дата публикации: 17.08.2026 г.</p>
+      </header>
+
+      <article id="section-1" class="privacy-article">
+        <span class="privacy-article__number">01</span>
+        <h2 class="privacy-article__title">Общие положения</h2>
+        <p class="privacy-article__text">Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных.</p>
+        <p class="privacy-article__text">Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
+        <p class="privacy-article__text">Настоящая политика Оператора в отношении обработки персональных данных применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта vitalina-design.ru.</p>
+      </article>
+
+      <article id="section-2" class="privacy-article">
+        <span class="privacy-article__number">02</span>
+        <h2 class="privacy-article__title">Какие данные обрабатываются</h2>
+        <p class="privacy-article__text">Оператор может обрабатывать следующие персональные данные Пользователя:</p>
+        <ul class="privacy-article__list">
+          <li>Фамилия, имя, отчество</li>
+          <li>Номер телефона</li>
+          <li>Город</li>
+          <li>Тип объекта</li>
+          <li>Площадь объекта</li>
+          <li>Иные сведения, которые пользователь добровольно указывает в заявке</li>
+        </ul>
+        <p class="privacy-article__text">Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов «cookie») с помощью сервисов интернет-статистики.</p>
+      </article>
+
+      <article id="section-3" class="privacy-article">
+        <span class="privacy-article__number">03</span>
+        <h2 class="privacy-article__title">Цель обработки</h2>
+        <p class="privacy-article__text">Данные используются только для связи с пользователем, подготовки консультации и обсуждения проекта.</p>
+        <p class="privacy-article__text">Оператор имеет право направлять Пользователю уведомления о новых услугах и специальных предложениях. Пользователь всегда может отказаться от получения информационных сообщений, направив Оператору письмо на адрес электронной почты.</p>
+        <p class="privacy-article__text">Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его содержания.</p>
+      </article>
+
+      <article id="section-4" class="privacy-article">
+        <span class="privacy-article__number">04</span>
+        <h2 class="privacy-article__title">Передача данных</h2>
+        <p class="privacy-article__text">Для доставки заявок используется сервис FormSubmit. Передавая данные, пользователь соглашается на их обработку и передачу этому сервису.</p>
+        <p class="privacy-article__text">Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства.</p>
+        <p class="privacy-article__text">Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.</p>
+      </article>
+
+      <article id="section-5" class="privacy-article">
+        <span class="privacy-article__number">05</span>
+        <h2 class="privacy-article__title">Контакты</h2>
+        <p class="privacy-article__text">По вопросам обработки данных можно обратиться через страницу <a href="contact.html" class="privacy-article__link">контактов</a>.</p>
+        <p class="privacy-article__text">Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Оператору уведомление посредством электронной почты.</p>
+      </article>
+
+      <a href="index.htm" class="privacy-back">Вернуться на главную</a>
+    </div>
+  </div>
+</main>
+
+<footer id="footer">
+  <div class="newfooter">
+    <a class="footer-privacy" href="privacy.html">Политика конфиденциальности</a>
+    <div class="copy">Все права защищены © 2026. vitalina-design.ru.</div>
+    <div class="dev-link"><a href="http://a-romashkov.ru/" target="_blank" rel="noopener noreferrer">Разработка сайта</a></div>
+  </div>
+</footer>
+
+<script>
+// Active navigation link on scroll
+(function() {
+  var sections = document.querySelectorAll('.privacy-article');
+  var navLinks = document.querySelectorAll('.privacy-nav__link');
+  
+  if (!sections.length || !navLinks.length) return;
+
+  function updateActiveLink() {
+    var scrollPos = window.scrollY + 150;
+    
+    sections.forEach(function(section, index) {
+      var top = section.offsetTop;
+      var bottom = top + section.offsetHeight;
+      
+      if (scrollPos >= top && scrollPos < bottom) {
+        navLinks.forEach(function(link) {
+          link.classList.remove('is-active');
+        });
+        navLinks[index].classList.add('is-active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
+})();
+
+// Smooth scroll to sections
+document.querySelectorAll('.privacy-nav__link').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var targetId = this.getAttribute('href');
+    var target = document.querySelector(targetId);
+    if (target) {
+      var offset = 120;
+      var targetPosition = target.offsetTop - offset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>

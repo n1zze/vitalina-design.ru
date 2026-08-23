@@ -1,0 +1,6 @@
+<?php
+declare(strict_types=1);
+require dirname(__DIR__) . '/app/bootstrap.php';
+require_auth();
+$pages = $pdo->query('SELECT id, slug, title, is_published, updated_at FROM pages ORDER BY slug')->fetchAll();
+?><!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Страницы | CMS</title><style>body{font:16px system-ui;max-width:900px;margin:40px auto;padding:0 20px}table{width:100%;border-collapse:collapse;margin-top:24px}td,th{text-align:left;padding:12px 8px;border-bottom:1px solid #ddd}a{color:#111}</style></head><body><h1>Страницы</h1><p><a href="import-pages.php">Импорт текущих страниц</a> · <a href="page.php">Добавить страницу</a> · <a href="publish.php">Публикация</a> · <a href="index.php">Проекты</a></p><table><thead><tr><th>Название</th><th>Slug</th><th>Статус</th><th>Обновлено</th></tr></thead><tbody><?php foreach ($pages as $page): ?><tr><td><a href="page.php?id=<?= (int) $page['id'] ?>"><?= e($page['title']) ?></a></td><td><?= e($page['slug']) ?></td><td><?= $page['is_published'] ? 'Опубликована' : 'Черновик' ?></td><td><?= e($page['updated_at']) ?></td></tr><?php endforeach; ?></tbody></table></body></html>
