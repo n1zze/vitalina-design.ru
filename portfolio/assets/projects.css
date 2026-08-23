@@ -128,7 +128,7 @@ body:has(.projects-page) .dev-link a {
 
 .project-gallery {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   padding: 0 25px 100px;
   columns: 3 300px;
   column-gap: 14px;

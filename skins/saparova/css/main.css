@@ -13303,7 +13303,7 @@ body#home:has(.hero-collage) .hero-section--about .hero-wrapper {
 body#home:has(.service-index-marker) .service-wrapper .row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
 body#home:has(.service-index-marker) .service-wrapper .row + .row { margin-top: 30px; }
 .service-photo .service-desc { display: grid; grid-template-rows: auto auto 40px; align-content: end; gap: 12px; }
-.service-photo .service-title { min-height: 2.2em; }
+.service-photo .service-title { min-height: 0.2em; }
 .service-photo .service-price { min-height: 1.4em; }
 .service-photo .service-btn { align-self: end; justify-self: start; }
 
