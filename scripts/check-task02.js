@@ -36,9 +36,27 @@ for (const [label, file] of services) {
     cursor = next;
   }
   if (count(html, /class=["'][^"']*pricing-row(?:\s|["'])/gi) !== 1) fail(`${label}: должна быть ровно одна pricing-row`);
+  const pi = html.indexOf('pricing-row__price');
+  if (pi !== -1) {
+    const seg = html.slice(pi, pi + 40).replace(/\s+/g, ' ');
+    if (!/>от(?=\s|$|<\/)/.test(seg)) fail(`${label}: цена должна начинаться с приставки «от» (${seg.slice(seg.indexOf('>') + 1, seg.indexOf('>') + 10)})`);
+  } else fail(`${label}: цена не найдена`);
   if (!/class=["'][^"']*image-deliverables__row/.test(html)) fail(`${label}: состав услуги должен содержать блоки картинка+описание`);
   if (!/class=["'][^"']*image-deliverables__image/.test(html)) fail(`${label}: блоки состава должны содержать изображения`);
   if (!/data-service-form/.test(html) || !/name=["']name["']/.test(html) || !/name=["']phone["']/.test(html) || !/name=["']consent["']/.test(html)) fail(`${label}: отсутствует полная единая форма`);
+}
+
+for (const f of ['dental-clinic', 'playroom', 'ajax-office']) {
+  const file = `portfolio/privateinterior/${f}.html`;
+  if (!fs.existsSync(path.join(root, file))) fail(`project: отсутствует страница ${file}`);
+  else {
+    const html = read(file);
+    if (!html.includes('assets/projects/' + f + '/')) fail(`project ${f}: ссылки на изображения отсутствуют`);
+  }
+}
+const catalogIndex = read('portfolio/index.htm');
+for (const f of ['dental-clinic', 'playroom', 'ajax-office']) {
+  if (!catalogIndex.includes('privateinterior/' + f + '.html')) fail(`catalog: проект ${f} не добавлен`);
 }
 
 const interior = read('portfolio/service/interior-design.html');

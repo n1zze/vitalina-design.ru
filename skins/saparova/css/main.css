@@ -13340,8 +13340,8 @@ body#home:has(.service-index-marker) .service-wrapper .row + .row { margin-top: 
 .planning-example-section { padding: 80px 0; }
 .planning-example__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; margin-bottom: 40px; }
 .planning-example__title-group { max-width: 640px; }
-.planning-example__link { display: inline-flex; align-items: center; gap: 8px; color: var(--public-cta-primary); text-decoration: none; font-family: "Manrope", sans-serif; font-weight: 500; font-size: 14px; }
-.planning-example__link .planning-example__arrow { font-size: 14px; }
+.planning-example__header .featured-header__link,
+.planning-example__header .featured-header__arrow { font-size: 16px; }
 .planning-example__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
 .planning-example__body { max-width: 560px; }
 .planning-example__text { font-family: "Manrope", sans-serif; font-weight: 300; font-size: 17px; line-height: 1.6; color: #6b6560; margin: 0; }
