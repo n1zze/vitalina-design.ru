@@ -9,14 +9,11 @@ body:has(.projects-page) #header,
 body:has(.projects-page) #navigation,
 body:has(.projects-page) #navigation a {
   font-family: "Manrope", sans-serif;
-  font-size: 19.2px;
-  font-weight: 300;
-  line-height: normal;
 }
 
 body:has(.projects-page) #navigation ul#menu > li > a,
 body:has(.projects-page) #navigation ul#menu .sub-menu a {
-  font-weight: 300 !important;
+  font-weight: inherit;
 }
 
 /* Footer typography override for projects pages */
@@ -46,8 +43,10 @@ body:has(.projects-page) .dev-link a {
   flex-direction: column;
   max-width: none;
   margin: 0 auto;
-  min-height: min(720px, calc(100vh - 72px));
-  padding: 96px max(25px, calc((100vw - 1400px) / 2 + 25px)) 48px;
+  height: 720px;
+  min-height: 720px;
+  padding: 140px max(25px, calc((100vw - 1400px) / 2 + 25px)) 72px;
+  box-sizing: border-box;
   text-align: left;
   color: #fff;
   background-color: #1a1714;
@@ -128,7 +127,7 @@ body:has(.projects-page) .dev-link a {
 
 .project-gallery {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   padding: 0 25px 100px;
   columns: 3 300px;
   column-gap: 14px;
@@ -232,6 +231,7 @@ body:has(.projects-page) .dev-link a {
 
 /* Catalog surface: compact editorial intro and deliberate grid hierarchy. */
 .projects-catalog-page .projects-page__intro {
+  height: auto;
   min-height: 0;
   max-width: 1400px;
   padding: 88px 25px 64px;
@@ -291,8 +291,9 @@ body:has(.projects-page) .dev-link a {
   }
 
   .projects-page__intro {
-    min-height: 620px;
-    padding: 64px 18px 28px;
+    min-height: 640px;
+    height: 640px;
+    padding: 112px 18px 48px;
     text-align: left;
   }
 
@@ -482,13 +483,12 @@ body:has(.projects-page) .dev-link a {
 
 /* ── Типографика header и footer для страниц проектов ────────────────────── */
 
-/* Header and Navigation */
+/* Header inherits the global thin Manrope typography set in main.css;
+   only guard the font stack so project pages don't override it. */
 .projects-page #header,
 .projects-page ~ #header,
 main.projects-page ~ #header {
   font-family: "Manrope", sans-serif !important;
-  font-weight: 300 !important;
-  font-size: 19.2px !important;
 }
 
 #header #navigation,
@@ -496,8 +496,6 @@ main.projects-page ~ #header {
 #header #navigation ul#menu > li > a,
 #header #navigation ul#menu .sub-menu a {
   font-family: "Manrope", sans-serif !important;
-  font-weight: 300 !important;
-  font-size: 19.2px !important;
 }
 
 /* Footer typography */
