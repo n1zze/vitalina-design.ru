@@ -814,7 +814,7 @@ footer {
   cursor: grab;
 }
 .slide--norway {
-  background: var(--radial-bg), var(--linear-bg), url("./../img/slider-bg/01.jpg");
+  background: var(--radial-bg), var(--linear-bg), url("./../img/slider-bg/slider-1-black.jpg");
   background-position: center center; /* x y */
   background-size: cover;
   background-repeat: no-repeat;
@@ -826,7 +826,7 @@ footer {
   background-repeat: no-repeat;
 }
 .slide--uae {
-  background: var(--radial-bg), var(--linear-bg), url("./../img/slider-bg/03.jpg");
+  background: var(--radial-bg), var(--linear-bg), url("./../img/slider-bg/slider-3.jpg");
   background-position: center center; /* x y */
   background-size: cover;
   background-repeat: no-repeat;
@@ -844,11 +844,18 @@ footer {
   background-repeat: no-repeat;
 }
 .slide--norocco {
-  background: var(--radial-bg), var(--linear-bg), url("./../img/slider-bg/06.jpg");
+  background: var(--radial-bg), var(--linear-bg), url("./../img/slider-bg/slider-6.jpg");
   background-position: center center; /* x y */
   background-size: cover;
   background-repeat: no-repeat;
 }
+.slide--seven {
+  background: var(--radial-bg), var(--linear-bg), url("./../img/slider-bg/slider-7.jpg");
+  background-position: center center; /* x y */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .slide::before {
   content: "";
 }

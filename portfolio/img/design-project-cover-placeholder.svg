@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Заглушка первой страницы дизайн-проекта">
+	<rect width="800" height="600" fill="#ebe6df"/>
+	<rect x="290" y="66" width="220" height="468" fill="#ffffff" stroke="#d4c5b5" stroke-width="2"/>
+	<text x="400" y="128" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="4" fill="#2b211e">VITALINA DESIGN</text>
+	<line x1="334" y1="152" x2="466" y2="152" stroke="#d4c5b5" stroke-width="1"/>
+	<text x="400" y="204" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="17" fill="#2b211e">Дизайн-проект интерьера</text>
+	<text x="400" y="228" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="12" fill="#a99c97">Пример проекта · страница 1</text>
+	<g fill="none" stroke="#b8aaa5" stroke-width="1.5">
+		<rect x="330" y="272" width="140" height="104"/>
+		<line x1="330" y1="316" x2="422" y2="316"/>
+		<line x1="422" y1="272" x2="422" y2="344"/>
+		<rect x="348" y="336" width="52" height="40"/>
+		<path d="M392 376 a14 14 0 0 1 14 -14"/>
+	</g>
+	<g stroke="#e5ddd4" stroke-width="6" stroke-linecap="round">
+		<line x1="320" y1="430" x2="480" y2="430"/>
+		<line x1="320" y1="452" x2="450" y2="452"/>
+		<line x1="320" y1="474" x2="466" y2="474"/>
+	</g>
+	<text x="400" y="516" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="10" fill="#a99c97">01 / 24</text>
+</svg>
