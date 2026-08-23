@@ -36,7 +36,8 @@ for (const [label, file] of services) {
     cursor = next;
   }
   if (count(html, /class=["'][^"']*pricing-row(?:\s|["'])/gi) !== 1) fail(`${label}: должна быть ровно одна pricing-row`);
-  if (!/class=["'][^"']*image-deliverables/.test(html)) fail(`${label}: состав услуги должен использовать image-deliverables`);
+  if (!/class=["'][^"']*image-deliverables__row/.test(html)) fail(`${label}: состав услуги должен содержать блоки картинка+описание`);
+  if (!/class=["'][^"']*image-deliverables__image/.test(html)) fail(`${label}: блоки состава должны содержать изображения`);
   if (!/data-service-form/.test(html) || !/name=["']name["']/.test(html) || !/name=["']phone["']/.test(html) || !/name=["']consent["']/.test(html)) fail(`${label}: отсутствует полная единая форма`);
 }
 

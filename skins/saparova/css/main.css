@@ -13278,12 +13278,14 @@ body#home:has(.hero-collage) .hero-section--about .hero-wrapper {
 .service-design-hero,
 .service-design-hero__content { min-height: 720px; }
 .service-design-hero__content { display: flex; flex-direction: column; justify-content: flex-end; padding-top: 140px; padding-bottom: 72px; }
-.service-design-hero__content .service-hero__subtitle { min-height: 5.1em; }
-.service-design-hero__content .service-hero__cta { align-self: flex-start; }
-.service-photo .service-desc { display: grid; grid-template-rows: minmax(52px, auto) 22px 38px; align-content: end; gap: 10px; }
+.service-design-hero__content .service-hero__subtitle { min-height: 5.1em; max-width: 640px; }
+.service-design-hero__content .service-hero__cta { align-self: flex-start; min-height: 52px; display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; box-sizing: border-box; }
+
+/* Catalog card alignment */
+.service-photo .service-desc { display: grid; grid-template-rows: auto auto 40px; align-content: end; gap: 12px; }
+.service-photo .service-title { min-height: 2.2em; }
+.service-photo .service-price { min-height: 1.4em; }
 .service-photo .service-btn { align-self: end; justify-self: start; }
-.service-deliverables .scope-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; margin-top: 32px; }
-.service-deliverables .scope-list__item { min-height: 180px; padding: 32px 0; border-top: 1px solid #d8cec6; }
 .deliverables-slider { position: relative; }
 .deliverables-slider img { position: absolute; inset: 0; opacity: 0; transition: opacity .8s cubic-bezier(.16, 1, .3, 1); }
 .deliverables-slider img.is-active { position: relative; opacity: 1; }
@@ -13293,8 +13295,9 @@ body#home:has(.hero-collage) .hero-section--about .hero-wrapper {
 	.service-design-hero, .service-design-hero__content { min-height: 640px; }
 	.service-design-hero__content { padding-top: 112px; padding-bottom: 48px; }
 	.service-design-hero__content .service-hero__subtitle { min-height: 0; }
-	.service-deliverables .scope-list { grid-template-columns: 1fr; gap: 0; }
+	.service-design-hero__content .service-hero__cta { min-height: 0; }
 	.service-photo .service-desc { grid-template-rows: auto auto auto; }
+	.service-photo .service-title, .service-photo .service-price { min-height: 0; }
 	.stages-section--editorial .stage-item__title { min-height: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .deliverables-slider img { transition: none; } }
