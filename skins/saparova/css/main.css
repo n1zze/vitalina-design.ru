@@ -13297,7 +13297,6 @@ body#home:has(.hero-collage) .hero-section--about .hero-wrapper {
 .service-hero.service-design-hero .service-design-hero__content {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
 	min-height: 720px;
 	height: 720px;
 	padding-top: 140px;
