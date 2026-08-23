@@ -43,8 +43,10 @@ body:has(.projects-page) .dev-link a {
   flex-direction: column;
   max-width: none;
   margin: 0 auto;
-  min-height: min(720px, calc(100vh - 72px));
-  padding: 96px max(25px, calc((100vw - 1400px) / 2 + 25px)) 48px;
+  height: 720px;
+  min-height: 720px;
+  padding: 140px max(25px, calc((100vw - 1400px) / 2 + 25px)) 72px;
+  box-sizing: border-box;
   text-align: left;
   color: #fff;
   background-color: #1a1714;
@@ -229,6 +231,7 @@ body:has(.projects-page) .dev-link a {
 
 /* Catalog surface: compact editorial intro and deliberate grid hierarchy. */
 .projects-catalog-page .projects-page__intro {
+  height: auto;
   min-height: 0;
   max-width: 1400px;
   padding: 88px 25px 64px;
@@ -288,8 +291,9 @@ body:has(.projects-page) .dev-link a {
   }
 
   .projects-page__intro {
-    min-height: 620px;
-    padding: 64px 18px 28px;
+    min-height: 640px;
+    height: 640px;
+    padding: 112px 18px 48px;
     text-align: left;
   }
 
