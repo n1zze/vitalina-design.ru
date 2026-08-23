@@ -45,7 +45,7 @@ body:has(.projects-page) .dev-link a {
   margin: 0 auto;
   height: 720px;
   min-height: 720px;
-  padding: 140px max(25px, calc((100vw - 1400px) / 2 + 25px)) 72px;
+  padding: 293px max(25px, calc((100vw - 1400px) / 2 + 25px)) 72px;
   box-sizing: border-box;
   text-align: left;
   color: #fff;
@@ -293,7 +293,7 @@ body:has(.projects-page) .dev-link a {
   .projects-page__intro {
     min-height: 640px;
     height: 640px;
-    padding: 112px 18px 48px;
+    padding: 223px 18px 48px;
     text-align: left;
   }
 
