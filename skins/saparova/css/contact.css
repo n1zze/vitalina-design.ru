@@ -218,6 +218,17 @@ a.contact-row__link:hover {
 	color: rgba(248, 245, 240, .52);
 }
 
+.contact-form-grid__body .contact-form__checkbox {
+	margin-top: 24px;
+	margin-bottom: 20px;
+	min-height: 24px;
+}
+
+.contact-form-grid__body .contact-form__submit {
+	margin-top: 0;
+	min-height: 48px;
+}
+
 .contact-form-grid__body .contact-form__submit {
 	background: #f8f5f0;
 	color: #1a1714;

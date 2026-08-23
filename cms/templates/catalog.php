@@ -23,7 +23,7 @@
                 <li class="menu-item"><a href="contact.html">Контакты</a></li>
             </ul></nav></div>
             <div class="social-col"><ul class="socialmedia">
-                <li class="socialmedia-li"><a title="MAX" href="https://max.ru/" class="socialmedia-a"><img src="/skins/saparova/img/max-black.svg" alt="MAX" width="22" height="22"></a></li>
+                <li class="socialmedia-li"><a title="MAX" href="https://max.ru/u/f9LHodD0cOKt9HbpvkjqjTuiGv6by4LKUyzeoQia5wfDrl-V-WDjzCZxOqs" class="socialmedia-a"><img src="/skins/saparova/img/max-black.svg" alt="MAX" width="22" height="22"></a></li>
                 <li class="socialmedia-li"><a title="WhatsApp" href="https://wa.me/79033475152?text=Добрый%20день!" class="socialmedia-a"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                 <li class="socialmedia-li"><a title="Telegram" href="https://t.me/rvvitalina" class="socialmedia-a"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
             </ul></div>

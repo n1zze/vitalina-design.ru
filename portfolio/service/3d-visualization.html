@@ -47,10 +47,12 @@
 						<li class="menu-item menu-item-has-children">
 							<a href="../service.htm">Услуги</a>
 							 <ul class="sub-menu cat-level-0">
+								<li class="menu-item menu-not-children"><a href="planirovochnoe-reshenie.html">Планировочное решение</a></li>
+								<li class="menu-item menu-not-children"><a href="3d-visualization.html">3D-визуализация</a></li>
+								<li class="menu-item menu-not-children"><a href="konsultaciya.html">Консультация</a></li>
 								<li class="menu-item menu-not-children"><a href="interior-design.html">Дизайн-проект</a></li>
-								<li class="menu-item menu-not-children"><a href="3d-visualization.html">3D визуализация</a></li>
-								<li class="menu-item menu-not-children"><a href="author-supervision.html">Авторский надзор</a></li>
 								<li class="menu-item menu-not-children"><a href="komplektaciya.html">Комплектация</a></li>
+								<li class="menu-item menu-not-children"><a href="author-supervision.html">Авторское сопровождение</a></li>
 							 </ul>
 						</li>
 						<li class="menu-item menu-not-children">
@@ -62,7 +64,7 @@
 			<div class="social-col">
 				<ul class="socialmedia">
 				  <li class="socialmedia-li">
-					  <a title="MAX" href="https://max.ru/" class="socialmedia-a">
+					  <a title="MAX" href="https://max.ru/u/f9LHodD0cOKt9HbpvkjqjTuiGv6by4LKUyzeoQia5wfDrl-V-WDjzCZxOqs" class="socialmedia-a">
 						  <img src="/skins/saparova/img/max-black.svg" alt="MAX" width="22" height="22">
 					  </a>
 				  </li>
@@ -110,7 +112,7 @@
 </section>
 
 <!-- 2. Что входит -->
-<section class="scope-section" id="scope">
+<section class="scope-section image-deliverables service-deliverables" id="scope">
 	<div class="container">
 		<span class="service-page-marker reveal">[ Что входит ]</span>
 		<h2 class="section-title reveal">Что входит</h2>
@@ -139,29 +141,9 @@
 		<span class="service-page-marker reveal">[ Стоимость ]</span>
 		<h2 class="section-title reveal">Стоимость</h2>
 		<div class="pricing-strip">
-			<a href="../contact.html" class="pricing-row reveal">
-				<div class="pricing-row__name">
-					<span class="pricing-row__title">Базовая визуализация</span>
-					<span class="pricing-row__summary">3-5&nbsp;рендеров, 1&nbsp;круг правок</span>
-				</div>
-				<div class="pricing-row__price">от&nbsp;1 000 <span>₽/м²</span></div>
-				<span class="pricing-row__cta">Заказать</span>
-			</a>
-			<a href="../contact.html" class="pricing-row pricing-row--featured reveal">
-				<div class="pricing-row__name">
-					<span class="pricing-row__title">Стандартная визуализация</span>
-					<span class="pricing-row__summary">6-10&nbsp;рендеров, 2&nbsp;круга правок</span>
-				</div>
-				<div class="pricing-row__price">от&nbsp;1 800 <span>₽/м²</span></div>
-				<span class="pricing-row__cta">Заказать</span>
-			</a>
-			<a href="../contact.html" class="pricing-row reveal">
-				<div class="pricing-row__name">
-					<span class="pricing-row__title">VIP визуализация</span>
-					<span class="pricing-row__summary">12+&nbsp;рендеров, анимация-пролёт</span>
-				</div>
-				<div class="pricing-row__price">от&nbsp;3 500 <span>₽/м²</span></div>
-				<span class="pricing-row__cta">Заказать</span>
+			<a href="#contact-form" class="pricing-row pricing-row--featured reveal">
+				<div class="pricing-row__name"><span class="pricing-row__title">3D-визуализация</span><span class="pricing-row__summary">Полный состав услуги</span></div>
+				<div class="pricing-row__price">1 000 <span>₽/м²</span></div><span class="pricing-row__cta">Заказать</span>
 			</a>
 		</div>
 	</div>
@@ -214,7 +196,7 @@
 				<p class="contact-form-hero__hint">Заполните форму, и я свяжусь с вами, чтобы обсудить задачу.</p>
 			</div>
 		</div>
-		<form class="contact-form-inline" id="viz3dForm" action="https://formsubmit.co/ajax/an_lop@mail.ru" method="POST" novalidate>
+		<form class="contact-form-inline" data-service-form id="viz3dForm" action="https://formsubmit.co/ajax/an_lop@mail.ru" method="POST" novalidate>
 			<input type="hidden" name="_subject" value="Заявка с сайта: 3D-визуализация">
 			<input type="hidden" name="_template" value="table">
 			<input type="hidden" name="_captcha" value="true">
@@ -260,7 +242,7 @@
 		</a>
 	  </li>
 	  <li>
-		<a href="https://max.ru/" data-mfb-label="MAX" class="mfb-component__button--child st-max">
+		<a href="https://max.ru/u/f9LHodD0cOKt9HbpvkjqjTuiGv6by4LKUyzeoQia5wfDrl-V-WDjzCZxOqs" data-mfb-label="MAX" class="mfb-component__button--child st-max">
 		  <img src="/skins/saparova/img/max.svg" alt="MAX" width="44" height="44">
 		</a>
 	  </li>
@@ -273,6 +255,7 @@
 
 <!-- Scripts -->
 <script src="../../skins/saparova/js/apps.js?v=11"></script>
+<script src="../../skins/saparova/js/service-pages.js?v=1"></script>
 <script>
 (function() {
 	/* Scroll reveal */

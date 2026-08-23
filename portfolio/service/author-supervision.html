@@ -47,10 +47,12 @@
 						<li class="menu-item menu-item-has-children">
 							<a href="../service.htm">Услуги</a>
 							 <ul class="sub-menu cat-level-0">
+								<li class="menu-item menu-not-children"><a href="planirovochnoe-reshenie.html">Планировочное решение</a></li>
+								<li class="menu-item menu-not-children"><a href="3d-visualization.html">3D-визуализация</a></li>
+								<li class="menu-item menu-not-children"><a href="konsultaciya.html">Консультация</a></li>
 								<li class="menu-item menu-not-children"><a href="interior-design.html">Дизайн-проект</a></li>
-								<li class="menu-item menu-not-children"><a href="3d-visualization.html">3D визуализация</a></li>
-								<li class="menu-item menu-not-children"><a href="author-supervision.html">Авторское сопровождение</a></li>
 								<li class="menu-item menu-not-children"><a href="komplektaciya.html">Комплектация</a></li>
+								<li class="menu-item menu-not-children"><a href="author-supervision.html">Авторское сопровождение</a></li>
 							 </ul>
 						</li>
 						<li class="menu-item menu-not-children">
@@ -62,7 +64,7 @@
 			<div class="social-col">
 				<ul class="socialmedia">
 				  <li class="socialmedia-li">
-					  <a title="MAX" href="https://max.ru/" class="socialmedia-a">
+					  <a title="MAX" href="https://max.ru/u/f9LHodD0cOKt9HbpvkjqjTuiGv6by4LKUyzeoQia5wfDrl-V-WDjzCZxOqs" class="socialmedia-a">
 						  <img src="/skins/saparova/img/max-black.svg" alt="MAX" width="22" height="22">
 					  </a>
 				  </li>
@@ -110,7 +112,7 @@
 </section>
 
 <!-- 2. Что входит -->
-<section class="scope-section" id="scope">
+<section class="scope-section image-deliverables service-deliverables" id="scope">
 	<div class="container">
 		<span class="service-page-marker reveal">[ Что входит ]</span>
 		<h2 class="section-title reveal">Что входит</h2>
@@ -129,29 +131,9 @@
 		<span class="service-page-marker reveal">[ Стоимость ]</span>
 		<h2 class="section-title reveal">Стоимость</h2>
 		<div class="pricing-strip">
-			<a href="../contact.html" class="pricing-row reveal">
-				<div class="pricing-row__name">
-					<span class="pricing-row__title">Разовые выезды</span>
-					<span class="pricing-row__summary">Проверка этапа, консультация по&nbsp;чертежам</span>
-				</div>
-				<div class="pricing-row__price">от&nbsp;5 000 <span>₽/выезд</span></div>
-				<span class="pricing-row__cta">Заказать</span>
-			</a>
-			<a href="../contact.html" class="pricing-row pricing-row--featured reveal">
-				<div class="pricing-row__name">
-					<span class="pricing-row__title">Базовый надзор</span>
-					<span class="pricing-row__summary">4&nbsp;выезда в&nbsp;месяц, материалы и&nbsp;декор</span>
-				</div>
-				<div class="pricing-row__price">от&nbsp;30 000 <span>₽/мес</span></div>
-				<span class="pricing-row__cta">Заказать</span>
-			</a>
-			<a href="../contact.html" class="pricing-row reveal">
-				<div class="pricing-row__name">
-					<span class="pricing-row__title">Расширенный надзор</span>
-					<span class="pricing-row__summary">8&nbsp;выездов, управление подрядчиками</span>
-				</div>
-				<div class="pricing-row__price">от&nbsp;60 000 <span>₽/мес</span></div>
-				<span class="pricing-row__cta">Заказать</span>
+			<a href="#contact-form" class="pricing-row pricing-row--featured reveal">
+				<div class="pricing-row__name"><span class="pricing-row__title">Авторское сопровождение</span><span class="pricing-row__summary">Еженедельный контроль реализации</span></div>
+				<div class="pricing-row__price">от 30 000 <span>₽/мес</span></div><span class="pricing-row__cta">Заказать</span>
 			</a>
 		</div>
 	</div>
@@ -195,7 +177,7 @@
 				<p class="contact-form-hero__hint">Заполните форму, и я свяжусь с вами, чтобы обсудить задачу.</p>
 			</div>
 		</div>
-		<form class="contact-form-inline" id="supervisionForm" action="https://formsubmit.co/ajax/an_lop@mail.ru" method="POST" novalidate>
+		<form class="contact-form-inline" data-service-form id="supervisionForm" action="https://formsubmit.co/ajax/an_lop@mail.ru" method="POST" novalidate>
 			<input type="hidden" name="_subject" value="Заявка с сайта: Авторское сопровождение">
 			<input type="hidden" name="_template" value="table">
 			<input type="hidden" name="_captcha" value="true">
@@ -241,7 +223,7 @@
 		</a>
 	  </li>
 	  <li>
-		<a href="https://max.ru/" data-mfb-label="MAX" class="mfb-component__button--child st-max">
+		<a href="https://max.ru/u/f9LHodD0cOKt9HbpvkjqjTuiGv6by4LKUyzeoQia5wfDrl-V-WDjzCZxOqs" data-mfb-label="MAX" class="mfb-component__button--child st-max">
 		  <img src="/skins/saparova/img/max.svg" alt="MAX" width="44" height="44">
 		</a>
 	  </li>
@@ -254,6 +236,7 @@
 
 <!-- Scripts -->
 <script src="../../skins/saparova/js/apps.js?v=11"></script>
+<script src="../../skins/saparova/js/service-pages.js?v=1"></script>
 <script>
 (function() {
 	/* Scroll reveal */

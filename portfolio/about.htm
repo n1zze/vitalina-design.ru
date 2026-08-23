@@ -64,10 +64,12 @@
 						<li class="menu-item menu-item-has-children">
 							<a href="service.htm">Услуги</a>
 							 <ul class="sub-menu cat-level-0">
+								<li class="menu-item menu-not-children"><a href="service/planirovochnoe-reshenie.html">Планировочное решение</a></li>
+								<li class="menu-item menu-not-children"><a href="service/3d-visualization.html">3D-визуализация</a></li>
+								<li class="menu-item menu-not-children"><a href="service/konsultaciya.html">Консультация</a></li>
 								<li class="menu-item menu-not-children"><a href="service/interior-design.html">Дизайн-проект</a></li>
-								<li class="menu-item menu-not-children"><a href="service/3d-visualization.html">3D визуализация</a></li>
-								<li class="menu-item menu-not-children"><a href="service/author-supervision.html">Авторский надзор</a></li>
 								<li class="menu-item menu-not-children"><a href="service/komplektaciya.html">Комплектация</a></li>
+								<li class="menu-item menu-not-children"><a href="service/author-supervision.html">Авторское сопровождение</a></li>
 							 </ul>
 						</li>
 						<li class="menu-item menu-not-children">
@@ -79,7 +81,7 @@
 			<div class="social-col">
 				<ul class="socialmedia">
 				  <li class="socialmedia-li">
-					  <a title="MAX" href="https://max.ru/" class="socialmedia-a">
+					  <a title="MAX" href="https://max.ru/u/f9LHodD0cOKt9HbpvkjqjTuiGv6by4LKUyzeoQia5wfDrl-V-WDjzCZxOqs" class="socialmedia-a">
 						  <img src="/skins/saparova/img/max-black.svg" alt="MAX" width="22" height="22">
 					  </a>
 				  </li>
@@ -155,12 +157,12 @@
 				<span class="about-metrics-item__label">Реализованных проектов</span>
 			</div>
 			<div class="about-metrics-item reveal" role="listitem">
-				<span class="about-metrics-item__number" data-max="100">0</span>
+				<span class="about-metrics-item__number" data-max="100" data-prefix=">">0</span>
 				<span class="about-metrics-item__line" aria-hidden="true"></span>
 				<span class="about-metrics-item__label">Коммерческих и жилых помещений</span>
 			</div>
 			<div class="about-metrics-item reveal" role="listitem">
-				<span class="about-metrics-item__number" data-max="16000">0</span>
+				<span class="about-metrics-item__number" data-max="16000" data-prefix=">">0</span>
 				<span class="about-metrics-item__line" aria-hidden="true"></span>
 				<span class="about-metrics-item__label">Спроектированных пространств (м²)</span>
 			</div>
@@ -512,7 +514,7 @@
 	  </li>
 	-->
 	  <li>
-		<a href="https://max.ru/" data-mfb-label="MAX" class="mfb-component__button--child st-max">
+		<a href="https://max.ru/u/f9LHodD0cOKt9HbpvkjqjTuiGv6by4LKUyzeoQia5wfDrl-V-WDjzCZxOqs" data-mfb-label="MAX" class="mfb-component__button--child st-max">
 		  <img src="/skins/saparova/img/max.svg" alt="MAX" width="44" height="44">
 
 		</a>
@@ -807,12 +809,13 @@ document.querySelectorAll('[data-phone-input]').forEach(function(phoneInput) {
 				item.classList.add('counted');
 
 				var maxAttr = numberEl.getAttribute('data-max');
+				var prefix = numberEl.getAttribute('data-prefix') || '';
 				var suffix = numberEl.getAttribute('data-suffix') || '';
 				var max = parseFloat(maxAttr);
 				if (isNaN(max)) return;
 
 				if (prefersReducedMotion) {
-					numberEl.textContent = max.toLocaleString('ru-RU') + suffix;
+					numberEl.textContent = prefix + max.toLocaleString('ru-RU') + suffix;
 					return;
 				}
 
@@ -830,7 +833,7 @@ document.querySelectorAll('[data-phone-input]').forEach(function(phoneInput) {
 					var progress = Math.min(elapsed / duration, 1);
 					var eased = easeOutCubic(progress);
 					var current = Math.floor(start + (max - start) * eased);
-					numberEl.textContent = current.toLocaleString('ru-RU') + (progress === 1 ? suffix : '');
+					numberEl.textContent = prefix + current.toLocaleString('ru-RU') + (progress === 1 ? suffix : '');
 					if (progress < 1) {
 						requestAnimationFrame(animate);
 					}
