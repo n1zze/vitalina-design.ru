@@ -42,6 +42,8 @@ for (const [label, file] of services) {
 }
 
 const interior = read('portfolio/service/interior-design.html');
+if (interior.includes('[ Состав проекта ]')) fail('interior: секция Состав проекта должна быть удалена');
+if (!interior.includes('[ Рабочая документация ]')) fail('interior: секция Рабочая документация отсутствует');
 for (const image of ['../img/survey-plan.jpg', '../img/planing-result.jpg', '../img/select-references.jpg']) {
   if (!interior.includes(image)) fail(`interior: отсутствует ${image}`);
 }
