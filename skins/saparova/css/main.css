@@ -13310,6 +13310,15 @@ body#home:has(.service-index-marker) .service-wrapper .row + .row { margin-top: 
 /* Fit floor-plan imagery without right-edge cropping */
 .image-deliverables__image--fit img,
 .deliverables-slider img { object-fit: contain; }
+
+/* Working documentation: compact editorial grouped list */
+.drawings-section { padding: 80px 0; }
+.drawings-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 40px; }
+.drawings-group__title { margin: 0 0 18px; font-family: "Manrope", sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #a88e78; }
+.drawings-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.drawings-list__item { display: flex; align-items: baseline; gap: 14px; font-family: "Manrope", sans-serif; font-weight: 300; font-size: 16px; line-height: 1.35; color: #1a1714; }
+.drawings-list__num { flex: 0 0 24px; font-family: "Manrope", sans-serif; font-weight: 300; font-size: 13px; color: #c99471; }
+@media (max-width: 767px) { .drawings-grid { grid-template-columns: 1fr; gap: 28px 0; } }
 .deliverables-slider { position: relative; }
 .deliverables-slider img { position: absolute; inset: 0; opacity: 0; transition: opacity .8s cubic-bezier(.16, 1, .3, 1); }
 .deliverables-slider img.is-active { position: relative; opacity: 1; }

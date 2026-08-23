@@ -9,14 +9,11 @@ body:has(.projects-page) #header,
 body:has(.projects-page) #navigation,
 body:has(.projects-page) #navigation a {
   font-family: "Manrope", sans-serif;
-  font-size: 19.2px;
-  font-weight: 300;
-  line-height: normal;
 }
 
 body:has(.projects-page) #navigation ul#menu > li > a,
 body:has(.projects-page) #navigation ul#menu .sub-menu a {
-  font-weight: 300 !important;
+  font-weight: inherit;
 }
 
 /* Footer typography override for projects pages */
@@ -482,13 +479,12 @@ body:has(.projects-page) .dev-link a {
 
 /* ── Типографика header и footer для страниц проектов ────────────────────── */
 
-/* Header and Navigation */
+/* Header inherits the global thin Manrope typography set in main.css;
+   only guard the font stack so project pages don't override it. */
 .projects-page #header,
 .projects-page ~ #header,
 main.projects-page ~ #header {
   font-family: "Manrope", sans-serif !important;
-  font-weight: 300 !important;
-  font-size: 19.2px !important;
 }
 
 #header #navigation,
@@ -496,8 +492,6 @@ main.projects-page ~ #header {
 #header #navigation ul#menu > li > a,
 #header #navigation ul#menu .sub-menu a {
   font-family: "Manrope", sans-serif !important;
-  font-weight: 300 !important;
-  font-size: 19.2px !important;
 }
 
 /* Footer typography */
