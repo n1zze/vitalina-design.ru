@@ -13275,27 +13275,53 @@ body#home:has(.hero-collage) .hero-section--about .hero-wrapper {
 }
 
 /* task02: unified service-page rhythm */
-.service-design-hero,
-.service-design-hero__content { min-height: 720px; }
-.service-design-hero__content { display: flex; flex-direction: column; justify-content: flex-end; padding-top: 140px; padding-bottom: 72px; }
-.service-design-hero__content .service-hero__subtitle { min-height: 5.1em; max-width: 640px; }
-.service-design-hero__content .service-hero__cta { align-self: flex-start; min-height: 52px; display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; box-sizing: border-box; }
+.service-hero.service-design-hero {
+	padding: 0 !important;
+	min-height: 720px;
+	height: 720px;
+}
 
-/* Catalog card alignment */
+.service-hero.service-design-hero .service-design-hero__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	min-height: 720px;
+	height: 720px;
+	padding-top: 140px;
+	padding-bottom: 72px;
+	box-sizing: border-box;
+}
+
+.service-hero.service-design-hero .service-hero__subtitle { min-height: 5.1em; max-width: 640px; }
+.service-hero.service-design-hero .service-hero__cta { align-self: flex-start; min-height: 52px; display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; box-sizing: border-box; }
+
+/* Catalog card alignment: 2 rows x 3 cards with gutters */
+body#home:has(.service-index-marker) .service-wrapper .row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
+body#home:has(.service-index-marker) .service-wrapper .row + .row { margin-top: 30px; }
 .service-photo .service-desc { display: grid; grid-template-rows: auto auto 40px; align-content: end; gap: 12px; }
 .service-photo .service-title { min-height: 2.2em; }
 .service-photo .service-price { min-height: 1.4em; }
 .service-photo .service-btn { align-self: end; justify-self: start; }
+
+/* Fit floor-plan imagery without right-edge cropping */
+.image-deliverables__image--fit img,
+.deliverables-slider img { object-fit: contain; }
 .deliverables-slider { position: relative; }
 .deliverables-slider img { position: absolute; inset: 0; opacity: 0; transition: opacity .8s cubic-bezier(.16, 1, .3, 1); }
 .deliverables-slider img.is-active { position: relative; opacity: 1; }
 .contact-form-inline [aria-invalid="true"] { outline: 2px solid #c99471; outline-offset: 2px; }
 .contact-form-inline__submit:disabled { cursor: wait; opacity: .65; }
+@media (max-width: 991px) {
+	body#home:has(.service-index-marker) .service-wrapper .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 767px) {
-	.service-design-hero, .service-design-hero__content { min-height: 640px; }
-	.service-design-hero__content { padding-top: 112px; padding-bottom: 48px; }
-	.service-design-hero__content .service-hero__subtitle { min-height: 0; }
-	.service-design-hero__content .service-hero__cta { min-height: 0; }
+	.service-hero.service-design-hero,
+	.service-hero.service-design-hero .service-design-hero__content { min-height: 640px; height: 640px; }
+	.service-hero.service-design-hero .service-design-hero__content { padding-top: 112px; padding-bottom: 48px; }
+	.service-hero.service-design-hero .service-hero__subtitle { min-height: 0; }
+	.service-hero.service-design-hero .service-hero__cta { min-height: 0; }
+	body#home:has(.service-index-marker) .service-wrapper .row { grid-template-columns: 1fr; gap: 18px; }
+	body#home:has(.service-index-marker) .service-wrapper .row + .row { margin-top: 24px; }
 	.service-photo .service-desc { grid-template-rows: auto auto auto; }
 	.service-photo .service-title, .service-photo .service-price { min-height: 0; }
 	.stages-section--editorial .stage-item__title { min-height: 0; }
