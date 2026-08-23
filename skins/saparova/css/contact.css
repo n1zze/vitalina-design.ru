@@ -178,7 +178,7 @@ a.contact-row__link:hover {
 	right: 36px;
 	bottom: 36px;
 	width: min(48%, 700px);
-	padding: 38px 46px;
+	padding: 56px 46px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
