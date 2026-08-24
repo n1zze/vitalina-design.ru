@@ -7524,11 +7524,11 @@ body:has(.service-benefits-section) .contact-section__subtitle {
 .service-design-hero .service-hero__meta {
 	width: auto;
 	align-self: flex-start;
-	color: rgba(255, 255, 255, .78);
+	color: #8a7e74;
 }
 
 .service-design-hero .service-hero__meta span + span {
-	border-color: rgba(255, 255, 255, .38);
+	border-color: #d4c5b5;
 }
 
 .service-design-hero .service-hero__cta {
@@ -7930,12 +7930,12 @@ body:has(.service-consultation-layout) .contact-section {
 	letter-spacing: .08em;
 	line-height: 1.4;
 	text-transform: uppercase;
-	color: rgba(255, 255, 255, .78);
+	color: #8a7e74;
 }
 
 .service-design-hero .service-hero__meta span + span {
 	padding-left: 28px;
-	border-left: 1px solid rgba(255, 255, 255, .38);
+	border-left: 1px solid #d4c5b5;
 }
 
 .service-design-hero__content {
@@ -11309,7 +11309,7 @@ body:has(.about-proof-section) .hero-stats__label {
 	letter-spacing: .18em;
 	line-height: 1.3;
 	text-transform: uppercase;
-	color: #a88e78;
+	color: #8a7e74;
 }
 
 .service-hero .service-page-marker {
@@ -11840,19 +11840,31 @@ body:has(.service-index-marker) .service-sibling-nav {
 
 .contact-form-hero__content {
 	display: grid;
-	grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
-	gap: 72px;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 24px;
 	align-items: end;
 }
 
 .contact-form-hero__header {
 	justify-self: start;
 	text-align: left;
+	grid-column: 1 / 3;
 }
 
 .contact-form-hero__body {
-	justify-self: end;
+	justify-self: start;
 	text-align: left;
+	grid-column: 3;
+}
+
+.contact-form-hero__hint {
+	font-family: "Manrope", sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	max-width: none;
+	margin: 0 0 24px 0;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.72);
 }
 
 .contact-form-hero__marker {
@@ -11876,16 +11888,6 @@ body:has(.service-index-marker) .service-sibling-nav {
 	letter-spacing: -0.02em;
 	color: #fff;
 	margin: 0 0 16px 0;
-}
-
-.contact-form-hero__hint {
-	font-family: "Manrope", sans-serif;
-	font-weight: 300;
-	font-size: 15px;
-	max-width: 340px;
-	margin: 0 0 24px 0;
-	line-height: 1.5;
-	color: rgba(255, 255, 255, 0.72);
 }
 
 .contact-form-inline {
@@ -12027,6 +12029,7 @@ body:has(.service-index-marker) .service-sibling-nav {
 	.contact-form-hero__header,
 	.contact-form-hero__body {
 		justify-self: start;
+		grid-column: 1;
 	}
 
 	.contact-form-hero__title {
@@ -12034,7 +12037,7 @@ body:has(.service-index-marker) .service-sibling-nav {
 	}
 
 	.contact-form-hero__hint {
-		max-width: 420px;
+		max-width: none;
 		margin: 0;
 	}
 
