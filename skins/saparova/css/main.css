@@ -9565,8 +9565,30 @@ body:has(.about-proof-section) .hero-stats__label {
 	margin-top: 4px;
 }
 
+.hp-field {
+	position: absolute !important;
+	left: -9999px !important;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	border: 0;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
 .contact-form__field.error .contact-form__error {
 	display: block;
+}
+
+.contact-form-inline__field.error .contact-form__error {
+	display: block;
+}
+
+.contact-form-inline__field.error .contact-form__input {
+	border-color: #c0392b;
 }
 
 .contact-form__field.error .contact-form__input {
@@ -11353,8 +11375,6 @@ body:has(.about-proof-section) .hero-stats__label {
 .contact-section .section-title,
 .stages-section .section-title {
 	max-width: 760px;
-	margin-right: auto;
-	margin-left: auto;
 	text-align: left;
 }
 
