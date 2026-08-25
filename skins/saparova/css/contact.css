@@ -68,6 +68,15 @@
 	padding: 56px 0 48px;
 }
 
+.contact-cols a {
+	text-decoration: none !important;
+}
+
+.contact-cols a:hover,
+.contact-cols a:focus {
+	text-decoration: none !important;
+}
+
 .contact-col .contact-group__title {
 	font-family: "Manrope", sans-serif;
 	font-weight: 500;

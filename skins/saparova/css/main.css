@@ -8386,7 +8386,6 @@ body:has(.about-proof-section) .hero-stats__label {
 }
 
 .faq-item__answer {
-	max-width: 620px;
 	padding: 0 44px 22px 0;
 }
 

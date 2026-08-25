@@ -42,7 +42,9 @@ body:has(.projects-page) .dev-link a {
   display: flex;
   flex-direction: column;
   max-width: none;
-  margin: 0 auto;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
   height: 720px;
   min-height: 720px;
   padding: 293px max(25px, calc((100vw - 1400px) / 2 + 25px)) 72px;
