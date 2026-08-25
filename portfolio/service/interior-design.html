@@ -105,7 +105,7 @@
 		<p class="service-hero__subtitle reveal">Полный цикл от&nbsp;планировочного решения до&nbsp;рабочей документации&nbsp;&mdash; чертежи, фотореалистичная 3D-визуализация и&nbsp;спецификации.</p>
 		<div class="service-hero__meta reveal" aria-label="Параметры проекта">
 			<span>от 3 000 ₽/м²</span>
-			<span>Ремонт без сюрпризов и хаоса</span>
+			<span>Личный комфорт в каждой детали</span>
 		</div>
 		<a href="../contact.html" class="service-hero__cta reveal">Обсудить проект</a>
 	</div>
@@ -167,7 +167,7 @@
 					<div class="image-deliverables__body"><span class="image-deliverables__number">05</span><h3>3D-визуализации</h3><p>Фотореалистичный образ будущего интерьера до начала ремонта: мебель, свет, декор и отделочные материалы.</p></div>
 				</article>
 				<article class="image-deliverables__row reveal" id="deliverable-materials">
-					<div class="image-deliverables__image"><img src="../img/consult-material-2.jpg" alt="Подбор материалов для интерьера" loading="lazy"></div>
+					<div class="image-deliverables__image"><img src="../img/podbor.jpg" alt="Подбор материалов для интерьера" loading="lazy"></div>
 					<div class="image-deliverables__body"><span class="image-deliverables__number">06</span><h3>Подбор материалов</h3><p>Материалы, мебель, свет и спецификации в единой системе проекта.</p></div>
 				</article>
 			</div>
@@ -236,21 +236,6 @@
 	</div>
 </section>
 
-<section class="service-process-section" aria-labelledby="service-process-title">
-	<div class="container">
-		<span class="service-page-marker">[ Этапы работы ]</span>
-		<h2 class="service-wide-title" id="service-process-title">Как строится процесс</h2>
-		<div class="service-process-list">
-			<article class="service-process-item reveal"><span>01</span><h3>Знакомство и анкета</h3><p>Обсуждаем пожелания, заполняем анкету, определяем бюджет и сроки.</p></article>
-			<article class="service-process-item reveal"><span>02</span><h3>Замеры и техническое задание</h3><p>Выезд на объект, обмерный план, фото и видео фиксация.</p></article>
-			<article class="service-process-item reveal"><span>03</span><h3>Планировочное решение</h3><p>2–3 варианта планировки с расстановкой мебели.</p></article>
-			<article class="service-process-item reveal"><span>04</span><h3>Подготовка референсов</h3><p>Коллажи, мебель, свет, текстиль, отделочные материалы.</p></article>
-			<article class="service-process-item reveal"><span>05</span><h3>3D-визуализация</h3><p>Фотореалистичные визуализации каждой комнаты до начала ремонта.</p></article>
-			<article class="service-process-item reveal"><span>06</span><h3>Рабочие чертежи и авторское сопровождение</h3><p>Полный комплект документации. Контроль реализации на каждом этапе.</p></article>
-		</div>
-	</div>
-</section>
-
 <!-- 4. Проекты -->
 <section class="portfolio-section" id="work">
 	<div class="container">
@@ -301,15 +286,17 @@
 		<form class="contact-form-inline" data-service-form id="interiorForm" action="https://formsubmit.co/ajax/an_lop@mail.ru" method="POST" novalidate>
 			<input type="hidden" name="_subject" value="Заявка с сайта: Дизайн-проект">
 			<input type="hidden" name="_template" value="table">
-			<input type="hidden" name="_captcha" value="true">
+			<input type="hidden" name="_captcha" value="true"><input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" placeholder="">
 			<div class="contact-form-inline__row">
 				<div class="contact-form-inline__field">
 					<label class="visually-hidden" for="interior-name">Ваше имя</label>
 					<input type="text" name="name" id="interior-name" placeholder="Ваше имя" required class="contact-form__input">
+					<span class="contact-form__error">Пожалуйста, укажите имя</span>
 				</div>
 				<div class="contact-form-inline__field">
 					<label class="visually-hidden" for="interior-phone">Номер телефона</label>
 					<input type="tel" name="phone" id="interior-phone" placeholder="+7 (___) ___-__-__" required class="contact-form__input" data-phone-input>
+					<span class="contact-form__error">Укажите корректный номер телефона</span>
 				</div>
 				<button type="submit" class="contact-form-inline__submit">Обсудить проект</button>
 			</div>
@@ -379,84 +366,6 @@
 		document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); });
 	}
 
-	/* Phone mask */
-	var phoneInput = document.querySelector('[data-phone-input]');
-	if (phoneInput) {
-		phoneInput.addEventListener('input', function() {
-			var val = phoneInput.value.replace(/\D/g, '');
-			if (val.length > 0 && val[0] === '8') val = '7' + val.substring(1);
-			if (val.length > 0 && val[0] !== '7') val = '7' + val;
-			var formatted = '';
-			if (val.length > 0) formatted = '+7';
-			if (val.length > 1) formatted += ' (' + val.substring(1, 4);
-			if (val.length > 4) formatted += ') ' + val.substring(4, 7);
-			if (val.length > 7) formatted += '-' + val.substring(7, 9);
-			if (val.length > 9) formatted += '-' + val.substring(9, 11);
-			phoneInput.value = formatted;
-		});
-	}
-
-	/* Form validation */
-	var form = document.getElementById('interiorForm');
-	var formSuccess = document.getElementById('interiorFormSuccess');
-	if (!form || !formSuccess) return;
-
-	form.addEventListener('submit', function(e) {
-		e.preventDefault();
-		var valid = true;
-		form.querySelectorAll('[required]').forEach(function(field) {
-			field.style.borderColor = '';
-			if (field.type === 'checkbox') {
-				if (!field.checked) {
-					valid = false;
-					field.parentElement.style.outline = '2px solid #e57373';
-				} else {
-					field.parentElement.style.outline = '';
-				}
-			} else if (!field.value.trim() || (field.type === 'tel' && field.value.replace(/\D/g, '').length < 11)) {
-				valid = false;
-				field.style.borderColor = '#e57373';
-			}
-		});
-		if (!valid) return;
-
-		var submitBtn = form.querySelector('button[type="submit"]');
-		var honey = form.querySelector('input[name="_honey"]');
-		if (honey && honey.value.trim() !== '') {
-			form.style.display = 'none';
-			formSuccess.style.display = 'block';
-			return;
-		}
-
-		var payload = { _captcha: 'true' };
-		form.querySelectorAll('[name]').forEach(function(f) {
-			if (f.name === '_honey') return;
-			if (f.type === 'checkbox') { payload[f.name] = f.checked ? 'Да' : 'Нет'; return; }
-			payload[f.name] = f.value.trim();
-		});
-
-		if (submitBtn) submitBtn.disabled = true;
-
-		fetch(form.action, {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-			body: JSON.stringify(payload)
-		})
-		.then(function(res) { return res.json(); })
-		.then(function(data) {
-			if (submitBtn) submitBtn.disabled = false;
-			if (data && data.success === 'true') {
-				form.style.display = 'none';
-				formSuccess.style.display = 'block';
-			} else {
-				alert('Не удалось отправить заявку. Попробуйте ещё раз или напишите в Telegram @rvvitalina.');
-			}
-		})
-		.catch(function() {
-			if (submitBtn) submitBtn.disabled = false;
-			alert('Не удалось отправить заявку. Попробуйте ещё раз или напишите в Telegram @rvvitalina.');
-		});
-	});
 })();
 </script>
 </body>

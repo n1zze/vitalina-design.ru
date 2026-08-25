@@ -33,20 +33,59 @@
     input.value = output;
   }
 
+  function clearFieldError(field) {
+    field.setAttribute('aria-invalid', 'false');
+    var row = field.closest('.contact-form-inline__field') || field.closest('.contact-form__field');
+    if (row) {
+      row.classList.remove('error');
+      var err = row.querySelector('.contact-form__error');
+      if (err) err.style.display = 'none';
+    }
+  }
+
+  function showFieldError(field) {
+    field.setAttribute('aria-invalid', 'true');
+    var row = field.closest('.contact-form-inline__field') || field.closest('.contact-form__field');
+    if (row) {
+      row.classList.add('error');
+      var err = row.querySelector('.contact-form__error');
+      if (err) err.style.display = 'block';
+    }
+  }
+
   document.querySelectorAll('[data-service-form]').forEach(function (form) {
     var phone = form.querySelector('[data-phone-input]');
     var success = form.querySelector('.contact-form-inline__success');
     if (phone) phone.addEventListener('input', function () { formatPhone(phone); });
 
+    form.querySelectorAll('[required]').forEach(function (field) {
+      field.addEventListener('input', function () { clearFieldError(field); });
+      if (field.type === 'checkbox') {
+        field.addEventListener('change', function () { clearFieldError(field); });
+      }
+    });
+
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       event.stopImmediatePropagation();
+
+      var honey = form.querySelector('input[name="_honey"]');
+      if (honey && honey.value.trim() !== '') {
+        form.style.display = 'none';
+        if (success) success.style.display = 'block';
+        return;
+      }
+
       var valid = true;
       form.querySelectorAll('[required]').forEach(function (field) {
         var invalid = field.type === 'checkbox' ? !field.checked : !field.value.trim();
         if (field.type === 'tel' && field.value.replace(/\D/g, '').length < 11) invalid = true;
-        field.setAttribute('aria-invalid', invalid ? 'true' : 'false');
-        valid = valid && !invalid;
+        if (invalid) {
+          showFieldError(field);
+          valid = false;
+        } else {
+          clearFieldError(field);
+        }
       });
       if (!valid) return;
 
@@ -58,7 +97,7 @@
         body: JSON.stringify(Object.fromEntries(new FormData(form).entries()))
       }).then(function (response) {
         if (!response.ok) throw new Error('request failed');
-        form.reset();
+        form.style.display = 'none';
         if (success) success.style.display = 'block';
       }).catch(function () {
         window.alert('Не удалось отправить заявку. Попробуйте ещё раз или напишите в Telegram @rvvitalina.');

@@ -117,13 +117,13 @@
 		<div class="image-deliverables" aria-labelledby="supervision-scope-title">
 			<div class="image-deliverables__intro">
 				<span class="service-page-marker reveal">[ Что входит ]</span>
-				<h2 class="service-wide-title reveal" id="supervision-scope-title">Что входит</h2>
+				<h2 class="service-wide-title reveal" id="supervision-scope-title">Что входит в услугу</h2>
 			</div>
 			<div class="image-deliverables__list">
-				<article class="image-deliverables__row reveal"><div class="image-deliverables__image"><img src="../assets/projects/private-house-krd/01.jpg" alt="Еженедельные выезды на объект" loading="lazy"></div><div class="image-deliverables__body"><span class="image-deliverables__number">01</span><h3>Еженедельные выезды на объект</h3><p>Регулярно проверяю ход работ и оперативно отвечаю на вопросы по проекту.</p></div></article>
-				<article class="image-deliverables__row reveal"><div class="image-deliverables__image"><img src="../assets/projects/private-house-krd/02.jpg" alt="Контроль соответствия дизайн-проекта и реализации" loading="lazy"></div><div class="image-deliverables__body"><span class="image-deliverables__number">02</span><h3>Контроль соответствия дизайн-проекта и реализации</h3><p>Сверяю строительные и отделочные работы с утверждёнными решениями.</p></div></article>
-				<article class="image-deliverables__row reveal"><div class="image-deliverables__image"><img src="../assets/projects/private-house-krd/03.jpg" alt="Коммуникация со строителями и подрядчиками" loading="lazy"></div><div class="image-deliverables__body"><span class="image-deliverables__number">03</span><h3>Коммуникация со строителями и подрядчиками</h3><p>Разъясняю проектные решения и координирую возникающие вопросы.</p></div></article>
-				<article class="image-deliverables__row reveal"><div class="image-deliverables__image"><img src="../assets/projects/private-house-krd/04.jpg" alt="Отчет и фотофиксация" loading="lazy"></div><div class="image-deliverables__body"><span class="image-deliverables__number">04</span><h3>Отчет и фотофиксация</h3><p>Фиксирую реализацию проекта и регулярно сообщаю о состоянии работ.</p></div></article>
+				<article class="image-deliverables__row reveal"><div class="image-deliverables__image"><img src="../img/control.jpg" alt="Еженедельные выезды на объект" loading="lazy"></div><div class="image-deliverables__body"><span class="image-deliverables__number">01</span><h3>Еженедельные выезды на объект</h3><p>Регулярно проверяю ход работ и оперативно отвечаю на вопросы по проекту.</p></div></article>
+				<article class="image-deliverables__row reveal"><div class="image-deliverables__image"><img src="../img/control-4.jpg" alt="Контроль соответствия дизайн-проекта и реализации" loading="lazy"></div><div class="image-deliverables__body"><span class="image-deliverables__number">02</span><h3>Контроль соответствия дизайн-проекта и реализации</h3><p>Сверяю строительные и отделочные работы с утверждёнными решениями.</p></div></article>
+				<article class="image-deliverables__row reveal"><div class="image-deliverables__image"><img src="../img/complection-4.jpg" alt="Коммуникация со строителями и подрядчиками" loading="lazy"></div><div class="image-deliverables__body"><span class="image-deliverables__number">03</span><h3>Коммуникация со строителями и подрядчиками</h3><p>Разъясняю проектные решения и координирую возникающие вопросы.</p></div></article>
+				<article class="image-deliverables__row reveal"><div class="image-deliverables__image"><img src="../img/control-3.jpg" alt="Отчет и фотофиксация" loading="lazy"></div><div class="image-deliverables__body"><span class="image-deliverables__number">04</span><h3>Отчет и фотофиксация</h3><p>Фиксирую реализацию проекта и регулярно сообщаю о состоянии работ.</p></div></article>
 			</div>
 		</div>
 	</div>
@@ -184,15 +184,17 @@
 		<form class="contact-form-inline" data-service-form id="supervisionForm" action="https://formsubmit.co/ajax/an_lop@mail.ru" method="POST" novalidate>
 			<input type="hidden" name="_subject" value="Заявка с сайта: Авторское сопровождение">
 			<input type="hidden" name="_template" value="table">
-			<input type="hidden" name="_captcha" value="true">
+			<input type="hidden" name="_captcha" value="true"><input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" placeholder="">
 			<div class="contact-form-inline__row">
 				<div class="contact-form-inline__field">
 					<label class="visually-hidden" for="supervision-name">Ваше имя</label>
 					<input type="text" name="name" id="supervision-name" placeholder="Ваше имя" required class="contact-form__input">
+					<span class="contact-form__error">Пожалуйста, укажите имя</span>
 				</div>
 				<div class="contact-form-inline__field">
 					<label class="visually-hidden" for="supervision-phone">Номер телефона</label>
 					<input type="tel" name="phone" id="supervision-phone" placeholder="+7 (___) ___-__-__" required class="contact-form__input" data-phone-input>
+					<span class="contact-form__error">Укажите корректный номер телефона</span>
 				</div>
 				<button type="submit" class="contact-form-inline__submit">Обсудить проект</button>
 			</div>
@@ -262,84 +264,6 @@
 		document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); });
 	}
 
-	/* Phone mask */
-	var phoneInput = document.querySelector('[data-phone-input]');
-	if (phoneInput) {
-		phoneInput.addEventListener('input', function() {
-			var val = phoneInput.value.replace(/\D/g, '');
-			if (val.length > 0 && val[0] === '8') val = '7' + val.substring(1);
-			if (val.length > 0 && val[0] !== '7') val = '7' + val;
-			var formatted = '';
-			if (val.length > 0) formatted = '+7';
-			if (val.length > 1) formatted += ' (' + val.substring(1, 4);
-			if (val.length > 4) formatted += ') ' + val.substring(4, 7);
-			if (val.length > 7) formatted += '-' + val.substring(7, 9);
-			if (val.length > 9) formatted += '-' + val.substring(9, 11);
-			phoneInput.value = formatted;
-		});
-	}
-
-	/* Form validation */
-	var form = document.getElementById('supervisionForm');
-	var formSuccess = document.getElementById('supervisionFormSuccess');
-	if (!form || !formSuccess) return;
-
-	form.addEventListener('submit', function(e) {
-		e.preventDefault();
-		var valid = true;
-		form.querySelectorAll('[required]').forEach(function(field) {
-			field.style.borderColor = '';
-			if (field.type === 'checkbox') {
-				if (!field.checked) {
-					valid = false;
-					field.parentElement.style.outline = '2px solid #e57373';
-				} else {
-					field.parentElement.style.outline = '';
-				}
-			} else if (!field.value.trim() || (field.type === 'tel' && field.value.replace(/\D/g, '').length < 11)) {
-				valid = false;
-				field.style.borderColor = '#e57373';
-			}
-		});
-		if (!valid) return;
-
-		var submitBtn = form.querySelector('button[type="submit"]');
-		var honey = form.querySelector('input[name="_honey"]');
-		if (honey && honey.value.trim() !== '') {
-			form.style.display = 'none';
-			formSuccess.style.display = 'block';
-			return;
-		}
-
-		var payload = { _captcha: 'true' };
-		form.querySelectorAll('[name]').forEach(function(f) {
-			if (f.name === '_honey') return;
-			if (f.type === 'checkbox') { payload[f.name] = f.checked ? 'Да' : 'Нет'; return; }
-			payload[f.name] = f.value.trim();
-		});
-
-		if (submitBtn) submitBtn.disabled = true;
-
-		fetch(form.action, {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-			body: JSON.stringify(payload)
-		})
-		.then(function(res) { return res.json(); })
-		.then(function(data) {
-			if (submitBtn) submitBtn.disabled = false;
-			if (data && data.success === 'true') {
-				form.style.display = 'none';
-				formSuccess.style.display = 'block';
-			} else {
-				alert('Не удалось отправить заявку. Попробуйте ещё раз или напишите в Telegram @rvvitalina.');
-			}
-		})
-		.catch(function() {
-			if (submitBtn) submitBtn.disabled = false;
-			alert('Не удалось отправить заявку. Попробуйте ещё раз или напишите в Telegram @rvvitalina.');
-		});
-	});
 })();
 </script>
 </body>

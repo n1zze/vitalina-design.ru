@@ -323,7 +323,8 @@ a.contact-row__link:hover {
 	display: block;
 }
 
-.contact-form__field.error .contact-form__input {
+.contact-form__field.error .contact-form__input,
+.contact-form-inline__field.error .contact-form__input {
 	border-color: #c0392b;
 }
 
